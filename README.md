@@ -1,4 +1,4 @@
-ember-env-macors
+ember-env-macros
 ==============================================================================
 
 [Short description of the addon.]
@@ -16,7 +16,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-env-macors
+ember install ember-env-macros
 ```
 
 

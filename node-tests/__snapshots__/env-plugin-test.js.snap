@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default value 1`] = `
+"import 'ember-env-macros';
+\\"default\\";
+\\"defaultValue\\";"
+`;
+
+exports[`dot separeted key 1`] = `
+"import 'ember-env-macros';
+\\"value\\";
+\\"eulav\\";"
+`;
+
+exports[`works 1`] = `
+"import 'ember-env-macros';
+\\"value\\";
+1;
+true;
+\\"value\\";
+1;
+false;"
+`;

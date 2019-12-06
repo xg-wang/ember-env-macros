@@ -1,3 +1,37 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<p>configEnv example:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>envValue</td>
+      <td id="config">{{this.model.config.envValue}}</td>
+    </tr>
+    <tr>
+      <td>nestedValue</td>
+      <td id="config-nested">{{this.model.config.nestedValue}}</td>
+    </tr>
+    <tr>
+      <td>defaultValue</td>
+      <td id="config-default">{{this.model.config.defaultValue}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>buildEnv example:</p>
+<table>
+  <tbody>
+    <tr>
+      <td>buildValue</td>
+      <td id="build">{{this.model.build.buildValue}}</td>
+    </tr>
+    <tr>
+      <td>nestedValue</td>
+      <td id="build-nested">{{this.model.build.nestedValue}}</td>
+    </tr>
+    <tr>
+      <td>defaultValue</td>
+      <td id="build-default">{{this.model.build.defaultValue}}</td>
+    </tr>
+  </tbody>
+</table>
