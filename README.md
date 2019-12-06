@@ -78,12 +78,12 @@ var model = {
   config: {
     envValue: false,
     nestedValue: 'config',
-    defaultValue: 'defaultValue',
+    defaultValue: 'default',
   },
   build: {
     buildValue: true,
     nestedValue: 'build',
-    defaultValue: 'defaultValue',
+    defaultValue: 'default',
   },
 };
 ```
