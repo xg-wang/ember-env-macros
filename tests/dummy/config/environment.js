@@ -13,8 +13,8 @@ module.exports = function(environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
+        Date: false,
+      },
     },
 
     APP: {
@@ -25,9 +25,9 @@ module.exports = function(environment) {
     ['ember-env-macros']: {
       envKey: false,
       nestedKey: {
-        key: 'config'
-      }
-    }
+        key: 'config',
+      },
+    },
   };
 
   if (environment === 'development') {

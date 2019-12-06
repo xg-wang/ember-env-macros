@@ -12,6 +12,10 @@
     "doc": "doc",
     "test": "tests"
   },
+  "files": [
+    "addon/",
+    "lib/"
+  ],
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
@@ -30,6 +34,7 @@
     "ember-cli-babel": "^7.7.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
     "@ember/optional-features": "^0.7.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.11.0",
@@ -50,10 +55,15 @@
     "ember-source": "~3.11.1",
     "ember-source-channel-url": "^1.1.0",
     "ember-try": "^1.0.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-ember": "^6.2.0",
     "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
     "loader.js": "^4.7.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "qunit-dom": "^0.8.4"
   },
   "engines": {
@@ -61,5 +71,14 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

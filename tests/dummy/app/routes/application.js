@@ -7,13 +7,13 @@ export default Route.extend({
       config: {
         envValue: configEnv('ember-env-macros.envKey'),
         nestedValue: configEnv('ember-env-macros.nestedKey.key'),
-        defaultValue: configEnv('ember-env-macros.missingKey', 'default')
+        defaultValue: configEnv('ember-env-macros.missingKey', 'default'),
       },
       build: {
         buildValue: buildEnv('ember-env-macros.buildKey'),
         nestedValue: buildEnv('ember-env-macros.nestedKey.key'),
-        defaultValue: buildEnv('ember-env-macros.missingKey', 'default')
-      }
-    }
-  }
+        defaultValue: buildEnv('ember-env-macros.missingKey', 'default'),
+      },
+    };
+  },
 });

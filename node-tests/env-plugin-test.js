@@ -1,9 +1,8 @@
-"use strict";
+/* eslint-env jest */
+const { transformSync } = require('@babel/core');
+const EnvPlugin = require('../lib/env-plugin');
 
-const { transformSync } = require("@babel/core");
-const EnvPlugin = require("../lib/env-plugin");
-
-test("works", () => {
+test('works', () => {
   const { code } = transformSync(
     `import { configEnv, buildEnv } from 'ember-env-macros';
 configEnv('string')
@@ -18,24 +17,24 @@ buildEnv('boolean')`,
           EnvPlugin,
           {
             configEnv: {
-              string: "value",
+              string: 'value',
               number: 1,
-              boolean: true
+              boolean: true,
             },
             buildEnv: {
-              string: "value",
+              string: 'value',
               number: 1,
-              boolean: false
-            }
-          }
-        ]
-      ]
+              boolean: false,
+            },
+          },
+        ],
+      ],
     }
   );
   expect(code).toMatchSnapshot();
 });
 
-test("dot separeted key", () => {
+test('dot separeted key', () => {
   const { code } = transformSync(
     `import { configEnv, buildEnv } from 'ember-env-macros';
 configEnv('some.key')
@@ -47,23 +46,23 @@ buildEnv('another.key')`,
           {
             configEnv: {
               some: {
-                key: "value"
-              }
+                key: 'value',
+              },
             },
             buildEnv: {
               another: {
-                key: "eulav"
-              }
-            }
-          }
-        ]
-      ]
+                key: 'eulav',
+              },
+            },
+          },
+        ],
+      ],
     }
   );
   expect(code).toMatchSnapshot();
 });
 
-test("default value", () => {
+test('default value', () => {
   const { code } = transformSync(
     `import { configEnv, buildEnv } from 'ember-env-macros';
 configEnv('some.missingKey', 'default')
@@ -75,17 +74,17 @@ buildEnv('anotherMissing', 'defaultValue')`,
           {
             configEnv: {
               some: {
-                key: "value"
-              }
+                key: 'value',
+              },
             },
             buildEnv: {
               another: {
-                key: "eulav"
-              }
-            }
-          }
-        ]
-      ]
+                key: 'eulav',
+              },
+            },
+          },
+        ],
+      ],
     }
   );
   expect(code).toMatchSnapshot();

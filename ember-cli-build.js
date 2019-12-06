@@ -8,9 +8,9 @@ module.exports = function(defaults) {
     'ember-env-macros': {
       buildKey: true,
       nestedKey: {
-        key: 'build'
-      }
-    }
+        key: 'build',
+      },
+    },
   });
 
   /*
