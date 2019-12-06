@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/xg-wang/ember-env-macros",
   "license": "MIT",
   "author": "",
   "directories": {
@@ -14,8 +14,10 @@
   },
   "files": [
     "addon/",
-    "lib/"
+    "lib/",
+    "index.js"
   ],
+  "types": "index.d.ts",
   "scripts": {
     "build": "ember build",
     "lint:hbs": "ember-template-lint .",
