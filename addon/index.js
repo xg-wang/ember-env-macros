@@ -1,5 +1,4 @@
 function configEnv() {}
 function buildEnv() {}
 
-export { configEnv, buildEnv }
-
+export { configEnv, buildEnv };

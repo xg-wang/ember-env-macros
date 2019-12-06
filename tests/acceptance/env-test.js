@@ -9,11 +9,20 @@ module('Acceptance | application', function(hooks) {
     await visit('/');
 
     assert.equal(document.querySelector('#config').textContent, 'false');
-    assert.equal(document.querySelector('#config-nested').textContent, 'config');
-    assert.equal(document.querySelector('#config-default').textContent, 'default');
+    assert.equal(
+      document.querySelector('#config-nested').textContent,
+      'config'
+    );
+    assert.equal(
+      document.querySelector('#config-default').textContent,
+      'default'
+    );
 
     assert.equal(document.querySelector('#build').textContent, 'true');
     assert.equal(document.querySelector('#build-nested').textContent, 'build');
-    assert.equal(document.querySelector('#build-default').textContent, 'default');
+    assert.equal(
+      document.querySelector('#build-default').textContent,
+      'default'
+    );
   });
 });
