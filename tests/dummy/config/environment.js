@@ -22,7 +22,7 @@ module.exports = function(environment) {
       // when it is created
     },
 
-    ['ember-env-macros']: {
+    'ember-env-macros': {
       envKey: false,
       nestedKey: {
         key: 'config',
