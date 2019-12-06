@@ -13,7 +13,6 @@
     "test": "tests"
   },
   "files": [
-    "addon/",
     "lib/",
     "index.js"
   ],
