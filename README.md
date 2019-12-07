@@ -88,6 +88,8 @@ var model = {
 };
 ```
 
+When used in an addon or engine, both config and build envs are from the host app.
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.

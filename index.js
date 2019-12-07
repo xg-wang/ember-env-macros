@@ -25,10 +25,17 @@ module.exports = {
   },
 
   _getEnvPlugin() {
-    const buildEnv = parseBabelPluginOptions(this.app.options);
-    const configEnv = parseBabelPluginOptions(
-      this.project.config(this.app.env)
-    );
+    const buildEnv = parseBabelPluginOptions(this._findHost().options);
+    const configEnv = parseBabelPluginOptions(this.project.config());
     return [require.resolve('./lib/env-plugin.js'), { buildEnv, configEnv }];
+  },
+
+  _findHost() {
+    let current = this;
+    let app;
+    do {
+      app = current.app || app;
+    } while (current.parent.parent && (current = current.parent));
+    return app;
   },
 };
