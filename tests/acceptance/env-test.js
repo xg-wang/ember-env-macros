@@ -8,10 +8,19 @@ module('Acceptance | application', function(hooks) {
   test('visiting /', async function(assert) {
     await visit('/');
 
-    assert.equal(document.querySelector('#config').textContent, 'false');
+    assert.equal(
+      document.querySelector('#dev').textContent,
+      'true',
+      'config ENV in development mode only'
+    );
+    assert.equal(
+      document.querySelector('#config').textContent,
+      'false',
+      'config in all environment'
+    );
     assert.equal(
       document.querySelector('#config-nested').textContent,
-      'config'
+      'config-nested'
     );
     assert.equal(
       document.querySelector('#config-default').textContent,

@@ -25,7 +25,7 @@ module.exports = function(environment) {
     'ember-env-macros': {
       envKey: false,
       nestedKey: {
-        key: 'config',
+        key: 'config-nested',
       },
     },
   };
@@ -36,6 +36,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['ember-env-macros'].dev = true;
   }
 
   if (environment === 'test') {
@@ -48,6 +49,7 @@ module.exports = function(environment) {
 
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
+    ENV['ember-env-macros'].dev = true;
   }
 
   if (environment === 'production') {

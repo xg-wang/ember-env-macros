@@ -5,6 +5,7 @@ export default Route.extend({
   model() {
     return {
       config: {
+        devValue: configEnv('ember-env-macros.dev'),
         envValue: configEnv('ember-env-macros.envKey'),
         nestedValue: configEnv('ember-env-macros.nestedKey.key'),
         defaultValue: configEnv('ember-env-macros.missingKey', 'default'),

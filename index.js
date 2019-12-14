@@ -26,7 +26,9 @@ module.exports = {
 
   _getEnvPlugin() {
     const buildEnv = parseBabelPluginOptions(this._findHost().options);
-    const configEnv = parseBabelPluginOptions(this.project.config());
+    const configEnv = parseBabelPluginOptions(
+      this.project.config(process.env.EMBER_ENV)
+    );
     return [require.resolve('./lib/env-plugin.js'), { buildEnv, configEnv }];
   },
 
