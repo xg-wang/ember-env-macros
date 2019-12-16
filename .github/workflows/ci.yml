@@ -75,7 +75,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    needs: [nodeX, floating-dependencies]
+    needs: [nodeX]
 
     strategy:
       fail-fast: true
