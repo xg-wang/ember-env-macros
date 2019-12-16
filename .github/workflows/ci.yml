@@ -68,7 +68,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: install dependencies
         run: yarn install --no-lockfile
-      - run: yarn test
+      - run: yarn test && yarn test:node
 
   ember-try-scenarios:
     name: ${{ matrix.ember-try-scenario }}
