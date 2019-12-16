@@ -1,7 +1,7 @@
 # ember-env-macros
 
 [![npm version](https://badge.fury.io/js/ember-env-macros.svg)](https://badge.fury.io/js/ember-env-macros)
-[![Build Status](https://travis-ci.com/xg-wang/ember-env-macros.svg?branch=master)](https://travis-ci.com/xg-wang/ember-env-macros)
+![](https://github.com/xg-wang/ember-env-macros/workflows/CI/badge.svg)
 
 Get both build and runtime configurations in Ember app or addon.
 
