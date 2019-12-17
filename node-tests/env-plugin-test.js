@@ -8,8 +8,8 @@ test('works', () => {
 configEnv('string')
 configEnv('number')
 configEnv('boolean')
-configEnv('string')
-configEnv('number')
+buildEnv('string')
+buildEnv('number')
 buildEnv('boolean')`,
     {
       plugins: [
@@ -17,13 +17,13 @@ buildEnv('boolean')`,
           EnvPlugin,
           {
             configEnv: {
-              string: 'value',
+              string: 'config',
               number: 1,
               boolean: true,
             },
             buildEnv: {
-              string: 'value',
-              number: 1,
+              string: 'build',
+              number: 2,
               boolean: false,
             },
           },
@@ -65,8 +65,8 @@ buildEnv('another.key')`,
 test('default value', () => {
   const { code } = transformSync(
     `import { configEnv, buildEnv } from 'ember-env-macros';
-configEnv('some.missingKey', 'default')
-buildEnv('anotherMissing', 'defaultValue')`,
+configEnv('some.missingKey', 'defaultConfig')
+buildEnv('anotherMissing', 'defaultBuild')`,
     {
       plugins: [
         [
